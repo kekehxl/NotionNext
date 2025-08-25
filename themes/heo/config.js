@@ -117,8 +117,8 @@ const CONFIG = {
   ],
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '如果加载缓慢',
-  HEO_SOCIAL_CARD_TITLE_2: '可以点击获取低价稳定梯子',
+  HEO_SOCIAL_CARD_TITLE_1: '低价稳定梯子',
+  HEO_SOCIAL_CARD_TITLE_2: '解决加载缓慢的问题',
   HEO_SOCIAL_CARD_TITLE_3: '点击获取',
   HEO_SOCIAL_CARD_URL: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
 
@@ -145,7 +145,7 @@ const CONFIG = {
   HEO_POST_LIST_IMG_CROSSOVER: true, // 博客列表图片左右交错
 
   HEO_ARTICLE_ADJACENT: true, // 显示上一篇下一篇文章推荐
-  HEO_ARTICLE_COPYRIGHT: true, // 显示文章版权声明
+  HEO_ARTICLE_COPYRIGHT: false, // 显示文章版权声明
   HEO_ARTICLE_NOT_BY_AI: false, // 显示非AI写作
   HEO_ARTICLE_RECOMMEND: true, // 文章关联推荐
 
