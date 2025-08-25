@@ -300,7 +300,7 @@ const LayoutSlug = props => {
         {!lock && post && (
           <div className='mx-auto md:w-full md:px-5'>
             {/* 文章主体 */}
-            <article
+            </article>
               id='article-wrapper'
               itemScope
               itemType='https://schema.org/Movie'>
