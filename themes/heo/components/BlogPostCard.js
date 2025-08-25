@@ -42,13 +42,15 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             <div
               className={
                 (POST_TWO_COLS ? ' 2xl:w-full' : '') +
-                ' w-full md:w-5/12 overflow-hidden cursor-pointer select-none'
+                // 调整封面容器尺寸，适配竖版封面
+                ' w-60 md:w-5/12 h-90 overflow-hidden cursor-pointer select-none' 
               }>
               <LazyImage
                 priority={index === 0}
                 src={post?.pageCoverThumbnail}
                 alt={post?.title}
-                className='h-full w-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out' //宽高都调整为自适应,保证封面居中
+                // 调整封面图片尺寸，设置为宽 w-60、高 h-90 ，可根据实际需求修改
+                className='w-60 h-90 object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out' 
               />
             </div>
           </SmartLink>
@@ -83,9 +85,9 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               }>
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon
-                icon={post.pageIcon}
-                className="heo-icon w-6 h-6 mr-1 align-middle transform translate-y-[-8%]" // 专门为 Heo 主题的图标设置样式
-              />
+                  icon={post.pageIcon}
+                  className="heo-icon w-6 h-6 mr-1 align-middle transform translate-y-[-8%]" // 专门为 Heo 主题的图标设置样式
+                />
               )}
               <span className='menu-link '>{post.title}</span>
             </SmartLink>
