@@ -40,7 +40,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
         {/* 预览图区域：自适应宽度，保持比例 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
-            <div className='w-full h-[300px] flex items-center justify-center bg-gray-50 dark:bg-[#2b2b2b]'>
+            <div className='w-full h-[500px] flex items-center justify-center bg-gray-50 dark:bg-[#2b2b2b]'>
               <LazyImage
                 priority={index === 0}
                 src={post?.pageCoverThumbnail}
