@@ -317,6 +317,8 @@ const LayoutSlug = props => {
 
               {/* 上一篇\下一篇文章 */}
               <PostAdjacent {...props} /
+                  </article>
+                 </div>
                  
                  {/* 分享 */}
               <ShareBar post={post} />
@@ -328,7 +330,7 @@ const LayoutSlug = props => {
                   <PostRecommend {...props} />
                 </div>
               )}
-            </article>
+            <article
 
             {/* 评论区 */}
             {fullWidth ? null : (
