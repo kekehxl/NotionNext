@@ -22,15 +22,15 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '每日更新',
   HEO_HERO_TITLE_3: 'WWW.KEKEHXL.COM',
   HEO_HERO_TITLE_4: '欢迎来到本站',
-  HEO_HERO_TITLE_5: '点击查看Mod安装教程',
-  HEO_HERO_TITLE_LINK: 'https://tangly1024.com',
+  HEO_HERO_TITLE_5: '点击查看网站公告',
+  HEO_HERO_TITLE_LINK: 'https://www.kekehxl.com/article/guide',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '随机Mod',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '本站公告', url: 'https://www.kekehxl.com/article/guide' },
-  HEO_HERO_CATEGORY_2: { title: '安装教程', url: 'https://www.kekehxl.com/article/example-1' },
-  HEO_HERO_CATEGORY_3: { title: '整合包链接', url: 'https://www.kekehxl.com/article/example-3' },
+  HEO_HERO_CATEGORY_2: { title: '鸣潮mod安装教程', url: 'https://www.kekehxl.com/article/example-1' },
+  HEO_HERO_CATEGORY_3: { title: '绝区零mod安装教程', url: 'https://www.kekehxl.com/article/2131abf2-7add-801f-a46f-ceecf9798065' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '',
