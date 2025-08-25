@@ -316,11 +316,13 @@ const LayoutSlug = props => {
               </section>
 
               {/* 上一篇\下一篇文章 */}
-              <PostAdjacent {...props} />
-
-              {/* 分享 */}
+              <PostAdjacent {...props} /
+                 
+                 {/* 分享 */}
               <ShareBar post={post} />
               {post?.type === 'Post' && (
+                {/* 版权 */}
+                  <PostCopyright {...props} />
                 <div className='px-5'
                   {/* 文章推荐 */}
                   <PostRecommend {...props} />
