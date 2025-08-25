@@ -5,7 +5,6 @@ import SmartLink from '@/components/SmartLink';
 import CONFIG from '../config';
 import TagItemMini from './TagItemMini';
 
-// 唯一的 BlogPostCard 声明
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   const showPreview =
     siteConfig('HEO_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap;
@@ -22,17 +21,24 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
     !showPreview;
 
   const POST_TWO_COLS = siteConfig('HEO_HOME_POST_TWO_COLS', true, CONFIG);
+  const COVER_HOVER_ENLARGE = siteConfig(
+    'HEO_POST_LIST_COVER_HOVER_ENLARGE',
+    true,
+    CONFIG
+  );
 
   return (
-    <article>
+    <article
+      className={` ${COVER_HOVER_ENLARGE} ? ' hover:transition-all duration-150' : ''`}>
+      {/* 卡片容器：适配多列布局，简约边框 */}
       <div
         data-wow-delay='.2s'
         className={
-          (POST_TWO_COLS
-            ? '2xl:h-[600px] 2xl:w-[400px]'
-            : '') +
-          ' wow fadeInUp flex flex-col w-[300px] md:w-[380px] h-[480px] group border border-gray-300 dark:border-gray-500 rounded-md overflow-hidden transition-all duration-300 ease-in-out mx-2 mb-4 hover:border-blue-500 hover:scale-101'
+          (POST_TWO_COLS ? '2xl:h-[600px] 2xl:w-[400px]' : '') +
+          // 默认边框颜色改为浅灰色，与纯白色背景区分， hover 时变为蓝色
+          ' wow fadeInUp flex flex-col w-[300px] md:w-[380px] h-[480px] group border border-gray-300 dark:border-gray-500 hover:border-blue-500 duration-300 transition-colors overflow-hidden rounded-md mx-2 mb-4'
         }>
+        {/* 预览图区域：自适应宽度，保持比例 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
             <div className='w-full h-[220px] flex items-center justify-center bg-gray-50 dark:bg-[#2b2b2b]'>
@@ -40,16 +46,19 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 priority={index === 0}
                 src={post?.pageCoverThumbnail}
                 alt={post?.title}
-                className='max-w-full max-h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-102'
+                className='max-w-full max-h-full object-cover group-hover:scale-102 group-hover:brightness-90 transition-all duration-300 ease-in-out'
               />
             </div>
           </SmartLink>
         )}
 
+        {/* 文字区域：紧凑排版，适配多列 */}
         <div className='flex flex-col justify-between p-3 px-4 w-full'>
           <header>
+            {/* 分类标签（简约样式） */}
             {post?.category && (
-              <div className='flex mb-1 items-start text-xs text-gray-500 dark:text-gray-400'>
+              <div
+                className={`flex mb-1 items-start text-xs text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300`}>
                 <SmartLink
                   passHref
                   href={`/category/${post.category}`}
@@ -59,10 +68,13 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               </div>
             )}
 
+            {/* 标题 + 图标（突出显示） */}
             <SmartLink
               href={post?.href}
               passHref
-              className='text-gray-900 dark:text-gray-100 line-clamp-2 cursor-pointer text-base md:text-lg font-semibold leading-snug transition-colors duration-300 ease-in-out group-hover:text-blue-600'>
+              className={
+                ' group-hover:text-indigo-600 dark:hover:text-yellow-300 text-gray-900 dark:text-gray-100  line-clamp-2 replace cursor-pointer text-base md:text-lg font-semibold leading-snug'
+              }>
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon
                   icon={post.pageIcon}
@@ -72,6 +84,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               <span className='menu-link '>{post.title}</span>
             </SmartLink>
 
+            {/* 副标题/说明（简洁展示） */}
             {post?.summary && (
               <p className='mt-2 text-xs md:text-sm text-gray-400 dark:text-gray-300 line-clamp-2'>
                 {post.summary}
@@ -79,6 +92,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             )}
           </header>
 
+          {/* 标签区（紧凑排列） */}
           <div className='flex flex-wrap items-center mt-2'>
             {post.tagItems?.map(tag => (
               <TagItemMini key={tag.name} tag={tag} />
