@@ -49,12 +49,12 @@ const CONFIG = {
   ],
 
   // 个人资料底部按钮
-  HEO_INFO_CARD_URL1: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
+  HEO_INFO_CARD_URL1: 'https://pd.qq.com/s/eyjq7jbde?b=9',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
+  HEO_INFO_CARD_URL2: 'https://pd.qq.com/s/esb7ooodm?b=9',
   HEO_INFO_CARD_ICON2: 'fab fa-user',
-  HEO_INFO_CARD_URL3: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
-  HEO_INFO_CARD_TEXT3: '获取低价稳定梯子',
+  HEO_INFO_CARD_URL3: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
+  HEO_INFO_CARD_TEXT3: '关注B站主页',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
@@ -117,10 +117,10 @@ const CONFIG = {
   ],
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: 'Mod交流频道',
-  HEO_SOCIAL_CARD_TITLE_2: '加入频道讨论交流Mod',
-  HEO_SOCIAL_CARD_TITLE_3: '点击加入鸣潮mod频道',
-  HEO_SOCIAL_CARD_URL: 'https://pd.qq.com/s/eyjq7jbde?b=9',
+  HEO_SOCIAL_CARD_TITLE_1: '如果加载缓慢',
+  HEO_SOCIAL_CARD_TITLE_2: '可以点击获取低价稳定梯子',
+  HEO_SOCIAL_CARD_TITLE_3: '点击获取',
+  HEO_SOCIAL_CARD_URL: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
 
   // 底部统计面板文案
   HEO_POST_COUNT_TITLE: '文章数:',
