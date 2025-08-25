@@ -43,16 +43,16 @@ const CONFIG = {
     '脏汐汐',
     '嘻汐汐',
     '乐汐汐',
-    '',
-    '数码科技爱好者',
-    '团队小组发动机'
+    '苦阿汐',
+    '汐腊奶',
+    '神金汐汐'
   ],
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
   HEO_INFO_CARD_URL2: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
-  HEO_INFO_CARD_ICON2: 'fab fa-github',
+  HEO_INFO_CARD_ICON2: 'fab fa-user',
   HEO_INFO_CARD_URL3: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
   HEO_INFO_CARD_TEXT3: '获取低价稳定梯子',
 
