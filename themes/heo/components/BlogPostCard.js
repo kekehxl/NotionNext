@@ -32,12 +32,11 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
       className={` ${COVER_HOVER_ENLARGE} ? ' hover:transition-all duration-150' : ''`}>
       {/* 卡片容器：适配多列布局，简约边框 */}
       <div
-  data-wow-delay='.2s'
-  className={
-    (POST_TWO_COLS ? '2xl:h-[600px] 2xl:w-[400px]' : '') +
-    // 默认边框灰色，hover 蓝色
-    ' wow fadeInUp flex flex-col w-[300px] md:w-[380px] h-[480px] group border border-gray-300 dark:border-gray-500 hover:border-blue-500 dark:hover:border-blue-600 duration-300 transition-colors overflow-hidden rounded-md mx-2 mb-4'
-  }>
+        data-wow-delay='.2s'
+        className={
+          (POST_TWO_COLS ? '2xl:h-[600px] 2xl:w-[400px]' : '') +
+          ' wow fadeInUp flex flex-col w-[300px] md:w-[380px] h-[480px] group border border-gray-200 dark:border-gray-600 hover:border-indigo-500  dark:hover:border-yellow-400 duration-300 transition-colors overflow-hidden rounded-md mx-2 mb-4'
+        }>
         {/* 预览图区域：自适应宽度，保持比例 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
