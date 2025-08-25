@@ -50,9 +50,9 @@ const CONFIG = {
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: 'https://pd.qq.com/s/eyjq7jbde?b=9',
-  HEO_INFO_CARD_ICON1: '/images/heo/mingchao.webp',
+  HEO_INFO_CARD_ICON1: 'fas fa-comment',
   HEO_INFO_CARD_URL2: 'https://pd.qq.com/s/esb7ooodm?b=9',
-  HEO_INFO_CARD_ICON2: '/images/heo/juequling.webp',
+  HEO_INFO_CARD_ICON2: 'fas fa-comment',
   HEO_INFO_CARD_URL3: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
   HEO_INFO_CARD_TEXT3: '关注B站主页',
 
