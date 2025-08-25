@@ -9,7 +9,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '点击查看本站公告', url: 'https://www.kekehxl.com/article/guide' },
-    { title: '点击查看Mod安装教程', url: 'https://www.kekehxl.com/article/example-1' }
+    { title: '点击获取低价稳定梯子', url: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -123,7 +123,7 @@ const CONFIG = {
   HEO_SOCIAL_CARD_URL: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
 
   // 底部统计面板文案
-  HEO_POST_COUNT_TITLE: '文章数:',
+  HEO_POST_COUNT_TITLE: '展示Mod数:',
   HEO_SITE_TIME_TITLE: '建站天数:',
   HEO_SITE_VISIT_TITLE: '访问量:',
   HEO_SITE_VISITOR_TITLE: '访客数:',
