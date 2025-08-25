@@ -50,9 +50,9 @@ const CONFIG = {
 
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: 'https://pd.qq.com/s/eyjq7jbde?b=9',
-  HEO_INFO_CARD_ICON1: 'fas fa-user',
+  HEO_INFO_CARD_ICON1: '/images/heo/mingchao.webp',
   HEO_INFO_CARD_URL2: 'https://pd.qq.com/s/esb7ooodm?b=9',
-  HEO_INFO_CARD_ICON2: 'fab fa-user',
+  HEO_INFO_CARD_ICON2: '/images/heo/juequling.webp',
   HEO_INFO_CARD_URL3: 'https://space.bilibili.com/1337479661?spm_id_from=333.1007.0.0',
   HEO_INFO_CARD_TEXT3: '关注B站主页',
 
@@ -100,10 +100,10 @@ const CONFIG = {
     },
     {
       title_1: 'JS',
-      img_1: '/images/heo/2023786e7fc488f453d5fb2be760c96185c0075502.webp',
+      img_1: '/images/heo/shouanren.webp',
       color_1: '#f7cb4f',
       title_2: 'HTML',
-      img_2: '/images/heo/202372b4d760fd8a497d442140c295655426070302.webp',
+      img_2: '/images/heo/ya.webp',
       color_2: '#e9572b'
     },
     {
