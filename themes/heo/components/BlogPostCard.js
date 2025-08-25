@@ -30,44 +30,34 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   return (
     <article
       className={` ${COVER_HOVER_ENLARGE} ? ' hover:transition-all duration-150' : ''`}>
-      {/* 容器：绿色范围，设置宽高、边框等样式，可根据实际需求调整宽高值 */}
+      {/* 卡片容器：竖版布局，预览图在上，文字在下 */}
       <div
         data-wow-delay='.2s'
         className={
           (POST_TWO_COLS ? '2xl:h-[600px] 2xl:w-[400px]' : '') +
-          ' wow fadeInUp border-2 border-green-500 dark:bg-[#1e1e1e] flex mb-4 flex-col md:flex-row w-[380px] h-[580px] group dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors justify-between overflow-hidden rounded-xl'
+          ' wow fadeInUp flex flex-col w-[380px] h-[580px] group dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors overflow-hidden rounded-xl'
         }>
-        {/* 图片：红色范围，设置宽高、居中显示、裁剪方式等，可根据实际需求调整宽高值 */}
+        {/* 预览图区域：占上半部分 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
-            <div
-              className={
-                (POST_TWO_COLS ? ' 2xl:w-full' : '') +
-                ' w-full md:w-1/2 lg:w-2/3 flex items-center justify-center'
-              }>
+            <div className='w-full h-[350px] flex items-center justify-center'>
               <LazyImage
                 priority={index === 0}
                 src={post?.pageCoverThumbnail}
                 alt={post?.title}
-                className='w-[300px] h-[450px] object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out'
+                className='max-w-full max-h-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out'
               />
             </div>
           </SmartLink>
         )}
 
-        {/* 文字区块：自适应容器剩余空间，设置内边距、宽度占比等 */}
-        <div
-          className={
-            (POST_TWO_COLS ? '2xl:p-4 2xl:h-auto 2xl:w-full' : '') +
-            ' flex p-4 flex-col justify-between h-auto w-full md:w-1/2 lg:w-1/3'
-          }>
+        {/* 文字区域：占下半部分，自适应高度 */}
+        <div className='flex flex-col justify-between p-4 w-full'>
           <header>
-            {/* 分类展示区域 */}
+            {/* 分类标签 */}
             {post?.category && (
               <div
-                className={`flex mb-1 items-center ${
-                  showPreview ? 'justify-center' : 'justify-start'
-                } hidden md:block flex-wrap dark:text-gray-300 text-gray-600 hover:text-indigo-700 dark:hover:text-yellow-500`}>
+                className={`flex mb-2 items-start text-gray-600 dark:text-gray-300 hover:text-indigo-700 dark:hover:text-yellow-500`}>
                 <SmartLink
                   passHref
                   href={`/category/${post.category}`}
@@ -77,12 +67,12 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               </div>
             )}
 
-            {/* 标题和图标区域 */}
+            {/* 标题 + 图标 */}
             <SmartLink
               href={post?.href}
               passHref
               className={
-                ' group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-extrabold leading-tight'
+                ' group-hover:text-indigo-700 dark:hover:text-yellow-700 dark:group-hover:text-yellow-600 text-black dark:text-gray-100  line-clamp-2 replace cursor-pointer text-xl font-bold leading-tight'
               }>
               {siteConfig('POST_TITLE_ICON') && (
                 <NotionIcon
@@ -92,22 +82,20 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               )}
               <span className='menu-link '>{post.title}</span>
             </SmartLink>
+
+            {/* 副标题/说明 */}
+            {post?.summary && (
+              <p className='mt-2 text-sm text-gray-500 dark:text-gray-400'>
+                {post.summary}
+              </p>
+            )}
           </header>
 
-          {/* 摘要展示区域：设置显示行数、文本样式等 */}
-          {(!showPreview || showSummary) && (
-            <main className='line-clamp-3 replace text-gray-700  dark:text-gray-300 text-sm font-light leading-tight mt-2'>
-              {post.summary}
-            </main>
-          )}
-
-          {/* 标签展示区域：设置间距、排版等 */}
-          <div className='md:flex-nowrap flex-wrap md:justify-start inline-block mt-4'>
-            <div>
-              {post.tagItems?.map(tag => (
-                <TagItemMini key={tag.name} tag={tag} />
-              ))}
-            </div>
+          {/* 标签区 */}
+          <div className='flex flex-wrap items-center mt-4'>
+            {post.tagItems?.map(tag => (
+              <TagItemMini key={tag.name} tag={tag} />
+            ))}
           </div>
         </div>
       </div>
