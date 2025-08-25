@@ -30,35 +30,39 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   return (
     <article
       className={` ${COVER_HOVER_ENLARGE} ? ' hover:transition-all duration-150' : ''`}>
+      {/* 容器：绿色范围，设置宽高、边框等样式，可根据实际需求调整宽高值 */}
       <div
         data-wow-delay='.2s'
         className={
-          (POST_TWO_COLS ? '2xl:h-[45rem] 2xl:flex-col' : '') +
-          ' wow fadeInUp border bg-white dark:bg-[#1e1e1e] flex mb-4 flex-col md:flex-row md:h-auto h-[600px] group w-full dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors justify-between overflow-hidden rounded-xl'
+          (POST_TWO_COLS ? '2xl:h-[600px] 2xl:w-[400px]' : '') +
+          ' wow fadeInUp border-2 border-green-500 dark:bg-[#1e1e1e] flex mb-4 flex-col md:flex-row w-[380px] h-[580px] group dark:border-gray-600 hover:border-indigo-600  dark:hover:border-yellow-600 duration-300 transition-colors justify-between overflow-hidden rounded-xl'
         }>
+        {/* 图片：红色范围，设置宽高、居中显示、裁剪方式等，可根据实际需求调整宽高值 */}
         {showPageCover && (
           <SmartLink href={post?.href} passHref legacyBehavior>
             <div
               className={
                 (POST_TWO_COLS ? ' 2xl:w-full' : '') +
-                ' w-full md:w-1/2 lg:w-1/3 overflow-hidden cursor-pointer select-none'
+                ' w-full md:w-1/2 lg:w-2/3 flex items-center justify-center'
               }>
               <LazyImage
                 priority={index === 0}
                 src={post?.pageCoverThumbnail}
                 alt={post?.title}
-                className='h-[400px] w-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out'
+                className='w-[300px] h-[450px] object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-500 ease-in-out'
               />
             </div>
           </SmartLink>
         )}
 
+        {/* 文字区块：自适应容器剩余空间，设置内边距、宽度占比等 */}
         <div
           className={
             (POST_TWO_COLS ? '2xl:p-4 2xl:h-auto 2xl:w-full' : '') +
-            ' flex p-6 flex-col justify-between h-auto md:h-full w-full md:w-2/3 lg:w-2/3'
+            ' flex p-4 flex-col justify-between h-auto w-full md:w-1/2 lg:w-1/3'
           }>
           <header>
+            {/* 分类展示区域 */}
             {post?.category && (
               <div
                 className={`flex mb-1 items-center ${
@@ -73,6 +77,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               </div>
             )}
 
+            {/* 标题和图标区域 */}
             <SmartLink
               href={post?.href}
               passHref
@@ -89,12 +94,14 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             </SmartLink>
           </header>
 
+          {/* 摘要展示区域：设置显示行数、文本样式等 */}
           {(!showPreview || showSummary) && (
             <main className='line-clamp-3 replace text-gray-700  dark:text-gray-300 text-sm font-light leading-tight mt-2'>
               {post.summary}
             </main>
           )}
 
+          {/* 标签展示区域：设置间距、排版等 */}
           <div className='md:flex-nowrap flex-wrap md:justify-start inline-block mt-4'>
             <div>
               {post.tagItems?.map(tag => (
