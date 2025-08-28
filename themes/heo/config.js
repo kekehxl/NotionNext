@@ -118,8 +118,8 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '低价稳定梯子',
-  HEO_SOCIAL_CARD_TITLE_2: '输入优惠码kekehxl享全场套餐9折优惠',
-  HEO_SOCIAL_CARD_TITLE_3: '点击即可获取        解决翻墙加载缓慢的问题',
+  HEO_SOCIAL_CARD_TITLE_2: '输入优惠码kekehxl享9折优惠',
+  HEO_SOCIAL_CARD_TITLE_3: '点击即可获取                 解决翻墙加载缓慢的问题',
   HEO_SOCIAL_CARD_URL: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
 
   // 底部统计面板文案
