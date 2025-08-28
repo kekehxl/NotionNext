@@ -33,7 +33,7 @@ const CONFIG = {
   HEO_HERO_CATEGORY_3: { title: '绝区零mod安装教程', url: 'https://www.kekehxl.com/article/2131abf2-7add-801f-a46f-ceecf9798065' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
-  HEO_HERO_RECOMMEND_POST_TAG: '',
+  HEO_HERO_RECOMMEND_POST_TAG: '超值',
   HEO_HERO_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
   //   HERO_RECOMMEND_COVER: 'https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_1280.jpg', // 英雄区右侧图片
 
@@ -118,7 +118,7 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '低价稳定梯子',
-  HEO_SOCIAL_CARD_TITLE_2: '解决加载缓慢的问题',
+  HEO_SOCIAL_CARD_TITLE_2: '输入优惠码kekehxl享9折优惠',
   HEO_SOCIAL_CARD_TITLE_3: '点击即可获取',
   HEO_SOCIAL_CARD_URL: 'https://tmsrets.top/zh/#/auth/signup;referral=wnInAdT1',
 
