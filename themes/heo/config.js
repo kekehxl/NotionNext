@@ -9,7 +9,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '点击查看本站公告', url: 'https://www.kekehxl.com/article/guide' },
-    { title: '点击获取低价稳定梯子', url: 'https://tmsrets.top/#/register?code=DKy6D2aS' }
+    { title: '如果网站未更新可以试试梯子换个节点然后刷新', url: 'https://tmsrets.top/#/register?code=DKy6D2aS' }
   ],
 
   // 英雄区左右侧组件颠倒位置
